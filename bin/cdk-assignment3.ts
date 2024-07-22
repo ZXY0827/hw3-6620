@@ -22,9 +22,6 @@ new CdkAssignment3Stack(app, 'CdkAssignment3Stack', {
     	/* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
 
-new MyCopierLambdaStack(app, 'MyCopierLambdaStack', {
-});
-
 new MyCleanerLambdaStack(app, 'MyCleanerLambdaStack', {
 });
 
