@@ -23,23 +23,6 @@ def lambda_handler(event, context):
             print(f"Successfully deleted the oldest object {old_object_key} from {bucket_name}")
     except Exception as e:
         print(f"Error for deleting temporary objects with 'temp' in the name: {e}")
-            
-    
-    
-    # if 'Contents' in response:
-    #     temp_objects.extend([obj for obj in response['Contents'] if 'temp' in obj['Key']])
-    #     if temp_objects:
-    #         # 按 LastModified 排序并找到最旧的包含 'temp' 的对象
-    #         old_object_key = min(temp_objects, key=lambda x: x['LastModified'])['Key']
-    #         # 删除最旧的对象
-    #         s3_client.delete_object(Bucket=bucket_name, Key=old_object_key)
-    #         print(f"Successfully deleted the oldest object {old_object_key} from {bucket_name}")
-            
-    #     else:
-    #         return {
-    #             'statusCode': 200,
-    #             'body': 'No temporary objects with "temp" in the name to delete.'
-    #         }
         
 
    
